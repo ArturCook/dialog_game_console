@@ -1,0 +1,13 @@
+{
+  "profiles": {
+    "DialogGameConsole": {
+      "commandName": "Project",
+      "commandLineArgs": "chcp 65001"
+    },
+    "OtherTerminal": {
+      "commandName": "Executable",
+      "executablePath": "C:\\Program Files\\WindowsApps\\Microsoft.WindowsTerminal_1.14.1861.0_x64__8wekyb3d8bbwe\\wt.exe",
+      "commandLineArgs": "\".\\DialogGameConsole.exe\""
+    }
+  }
+}
