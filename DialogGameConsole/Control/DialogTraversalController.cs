@@ -77,6 +77,11 @@ public class DialogTraversalController
     public void TraverseEdge(DialogEdge edge)
     {
         _currentEdges.Remove(edge);
+        foreach (var edge2 in _currentEdges)
+        {
+            if (edge2.Type == EdgeType.Option)
+                _currentEdges.Remove(edge2);
+        }
 
         _dialogPanelController.DisablePlayerTyping();
         _dialogPanelController.DisableNpcTyping();

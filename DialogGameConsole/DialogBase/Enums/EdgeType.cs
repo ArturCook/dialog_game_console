@@ -10,6 +10,7 @@ public enum EdgeType
 	Timing,
 	Option,
 	Probability,
+	Condition
 }
 
 public static class EdgeTypeExtensions
@@ -23,7 +24,8 @@ public static class EdgeTypeExtensions
 			case EdgeType.Timing: return "Timing";
 			case EdgeType.Option: return "Option";
 			case EdgeType.Probability: return "Probability";
-			default: throw new ArgumentException("Invalid Enum Value");
+            case EdgeType.Condition: return "Condition";
+            default: throw new ArgumentException("Invalid Enum Value");
 		}
     }
 }

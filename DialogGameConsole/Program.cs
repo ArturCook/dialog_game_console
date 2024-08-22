@@ -15,7 +15,8 @@ class Program
 
 	static void RunProgram()
 	{
-		var game = new Game();
+
+        var game = new Game();
 		
 		Task taskUi = null;
 		var isUiActive = false;

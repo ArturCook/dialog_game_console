@@ -1,9 +1,11 @@
 ﻿using DialogGameConsole.DialogBase;
 using DialogGameConsole.Enums;
+using DialogGameConsole.Infos.Interfaces;
 using DialogGameConsole.Options;
 using DialogGameConsole.Options.Enums;
 using DialogGameConsole.Util;
 using LanguageExt;
+using LanguageExt.ClassInstances;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -64,7 +66,6 @@ public class DialogBuilderList<T> where T : IDialog
         if (!_builders.Any()) return _rootBuilder;
         
         var emptyNode = DialogNode.NewNode(NodeType.Empty);
-        //_network.AddNode(emptyNode);
         foreach(var (type, branch) in _builders)
         {
             _builders[type] = branch.GetOrAddNode(emptyNode);
@@ -72,6 +73,8 @@ public class DialogBuilderList<T> where T : IDialog
         
         return _builders.Values.First();
     }
+
+
 
     private DialogBuilderList<T> AddBranch(BranchType type, DialogBuilder<T> builder) {
         AssertNotExists(type);

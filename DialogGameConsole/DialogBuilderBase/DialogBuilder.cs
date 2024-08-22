@@ -1,4 +1,5 @@
 ﻿using DialogGameConsole.DialogBase;
+using DialogGameConsole.Dialogs.PetDialog;
 using DialogGameConsole.Enums;
 using DialogGameConsole.Infos;
 using DialogGameConsole.Infos.Base;
@@ -189,9 +190,5 @@ public class DialogBuilder<T> where T : IDialog
     {
         return _network;
     }
-
-
-
-
 
 }
